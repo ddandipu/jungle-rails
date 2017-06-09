@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
-
+  get '/signup', to: 'users#new'
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
